@@ -71,9 +71,9 @@
       const username = (() => {
         if (host.rdp.username) return host.rdp.username;
         if (authUser && authUser.username) {
-          // // only include the domain if it is not already specified in the rdp file
-          // // and if the host URL has a domain part (not just an IP address or netbios name)
-          // if (maybeDomainHost && !host.rdp.domain) return `${authUser.username}@${maybeDomainHost}`;
+          // only include the domain if it is not already specified in the rdp file
+          // and if the host URL has a domain part (not just an IP address or netbios name)
+          if (maybeDomainHost && !host.rdp.domain) return `${authUser.username}@${maybeDomainHost}`;
           return `${authUser.username}`;
         }
       })();
